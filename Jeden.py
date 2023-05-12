@@ -39,8 +39,8 @@ errorLoop = "Y"
 while errorLoop == "Y":
     errorLoop = ""
 
-    # product_id = input("Podaj kod produktu:\n")
-    product_id = 58835954
+    product_id = input("Podaj kod produktu:\n")
+    #product_id = 58835954
     nrStrony = 1
     nextStrona = True
 
@@ -66,8 +66,7 @@ while errorLoop == "Y":
                     for key, value in mySelectors.items():
                         myReview[key] = getFromSelector(review, *value)
                     reviewList.append(myReview)
-        nextStrona = True if len(soup.select(
-            'a.pagination__next')) > 0 else False
+        nextStrona = True if len(soup.select('a.pagination__next')) > 0 else False
         nrStrony += 1
 
     json_object = json.dumps(reviewList, indent=4, ensure_ascii=False)
