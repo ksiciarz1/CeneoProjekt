@@ -129,4 +129,9 @@ dmypy.json
 .pyre/
 
 # my Ignore
-Opinions/
+Opinions/*
+!Opinions/.gitkeep 
+Charts/*
+!Charts/.gitkeep 
+Stats/*
+!Stats/.gitkeep
